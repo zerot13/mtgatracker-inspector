@@ -11,6 +11,8 @@ var _require = require('./api'),
 var _require2 = require("./conf"),
     pagePrefix = _require2.pagePrefix;
 
+/* TODO: DRY @ admin.js*/
+
 var niceColors = ["#AAAAAA", "#FF8500", "#B01124", "#99FF00", "#FFED00", "#3db0de", "#9A989F", // 6
 "#d09dfd", "#AEE5D8", "#95867F", "#80A1C1", "#BFD7B5", "#34608F", // 12
 "#D3DFB8", "#C6A15B", "#720E07", "#8B6220"];

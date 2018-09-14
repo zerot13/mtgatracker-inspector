@@ -1,6 +1,8 @@
 const { getOverallWinLoss, getPlayerEventHistory, getDeckCount, getTimeStats } = require('./api')
 const { pagePrefix } = require("./conf")
 
+/* TODO: DRY @ admin.js*/
+
 var niceColors = [
   "#AAAAAA",
   "#FF8500",

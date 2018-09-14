@@ -10,6 +10,8 @@ const { homeRoute } = require("./home")
 const { getDecks, getGames } = require("./api")
 const { pagePrefix } = require('./conf.js')
 
+const { adminRoute } = require("./admin")
+
 let parseQuerystring = (ctx, next) => {
   let cleanQuerystring = ctx.querystring.split("#")[0]
   let args = cleanQuerystring.split("&")
@@ -48,5 +50,6 @@ $(function() {
     page(`${pagePrefix}/profile/`, scrollTop, parseQuerystring, profileRoute)
     page(`${pagePrefix}/drafts/`, scrollTop, parseQuerystring, draftsRoute)
     page(`${pagePrefix}/game/`, scrollTop, parseQuerystring, gameRoute)
+    page(`${pagePrefix}/admin/`, scrollTop, parseQuerystring, adminRoute)
     page()
 })

@@ -30,6 +30,9 @@ var _require8 = require("./api"),
 var _require9 = require('./conf.js'),
     pagePrefix = _require9.pagePrefix;
 
+var _require10 = require("./admin"),
+    adminRoute = _require10.adminRoute;
+
 var parseQuerystring = function parseQuerystring(ctx, next) {
   var cleanQuerystring = ctx.querystring.split("#")[0];
   var args = cleanQuerystring.split("&");
@@ -68,5 +71,6 @@ $(function () {
   page(pagePrefix + "/profile/", scrollTop, parseQuerystring, profileRoute);
   page(pagePrefix + "/drafts/", scrollTop, parseQuerystring, draftsRoute);
   page(pagePrefix + "/game/", scrollTop, parseQuerystring, gameRoute);
+  page(pagePrefix + "/admin/", scrollTop, parseQuerystring, adminRoute);
   page();
 });
